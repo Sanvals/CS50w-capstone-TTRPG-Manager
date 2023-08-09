@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+.menu-choose {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    margin: 4px;
+}
+
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+
+.menu-spells {
+    display: none;
+}
+
+#levelSpell {
+    width: 100px;
+}
+
+.menu-container {
+    min-width: 70%;
+    max-width: 70%;
+    font-size: .8rem;
+    background-color: rgba(223, 223, 223, 0);
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-contnet;
+}
+
+.container {
+    align-content: center;
+    margin: auto;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container div {
+    width: 200px;
+    margin: 10px;
+    position: relative;
+}
+
+.container div input {
+    border-radius: 40px;
+    padding-left: 35px;
+    height: 30px;
+}
+
+.material-icons {
+    position: absolute;
+    top: 18%;
+    left: 4%;
+    font-size: 20px !important;
+    color: gray;
+}
+
+.table {
+    width: 100%;
+    margin: auto;
+    font-size: .7rem;
+}
+
+.table td {
+    padding: 0px;
+}
+
+#item-card {
+    float: right;
+    width: 30%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 212, 212);
+    padding: 10px;
+    font-size: .8rem;
+    height: fit-content
+}
+
+#spell-card {
+    float: right;
+    width: 30%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(212, 212, 212);
+    padding: 10px;
+    font-size: .8rem;
+    height: fit-content;
+}

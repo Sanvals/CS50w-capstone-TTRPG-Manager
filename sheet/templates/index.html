@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+{% endblock %}
+
+{% block title %}
+    Main
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <table class="table table-striped table-hover column-left">
+        <thead>
+            <tr>
+                <th scope="col-sm-" style="width: 20px;"> </th>
+                <th scope="col">Character</th>
+                <th scope="col">Race</th>
+                <th scope="col">Class</th>
+                <th scope="col">Level</th>
+                <th scope="col">Health</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% if user.is_authenticated %}
+            {% for i in characters %}
+            {% if i.player == request.user %}
+            <tr>
+            <td><img src="static/images/classes/{{ i.character_class | lower }}.svg" height="20px" width="100%"></td>
+            <td>
+                <a href="{% url 'character_page' i.pk %}">
+                {{ i.name }}
+                </a>
+            </td>
+            <td>{{ i.race}}</td>
+            <td>{{ i.character_class }}</td>
+            <td>Lv. {{ i.level }}</td>
+            <td>{{ i.currenthp }}/{{ i.hp }}</td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+
+    <!-- Information for the floating character tracks -->
+    <div class="column-right" style="min-width: 20%;">
+        Latest characters
+        {% for i in characters %}
+            {% if i.player != request.user %}
+                <div class="character-card">
+                    <p>⭐<b>{{ i.name }}</b> ({{ i.player }})</p>
+                    <p><span>{{ i.race }} {{ i.character_class }} lv {{ i.level }}</span></p>
+                </div>
+            {% else %}
+                <div class="character-card">
+                    <p>⭐<b><a href="{% url 'character_page' i.pk %}">{{ i.name }}</a></b> ({{ i.player }})</p>
+                    <p><span>{{ i.race }} {{ i.character_class }} lv {{ i.level }}</span></p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

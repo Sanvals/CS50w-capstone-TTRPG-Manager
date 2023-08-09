@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{% static 'create.css' %}">
+{% endblock %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block body %}
+<div class="card container">
+<h3 class="text-center">New Character</h1>
+    <hr>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div id="card_name">
+                {{ form.name }}
+            </div>
+            <div id="card_race">
+                {{ form.race_choice }}
+            </div>
+            <div id="card_class">
+                {{ form.class_choice }}
+            </div>
+            <div id="card_level">
+                {{ form.level }}
+            </div>
+        </div>
+        <div class="row">
+            <div id="card_alignment">
+                {{ form.alignment }}
+            </div>
+            <div id="card_background">
+                {{ form.background }}
+            </div>
+            <div id="card_hitdice">
+                Hit Dice: <span id="card_hitdice_number">1</span>d<span id="card_hitdice_dice">6</span>
+            </div>
+            <div id="card_hitpoints">
+                HP: <span id="it_hp">{{ form.hp }}</span>
+            </div>
+            <div id="card_url">
+                {{ form.image }}
+            </div>
+        </div>
+        <div class="row">
+            {% for name, description in stats.items %}
+            <div class="stat-item">
+                <input id="id_{{ name | lower }}" name="{{ name | lower }}" class="form-control form-group stat-form" value=10 type="number">
+                    <span id="stat-item-name" class="skill-tooltip" data-bs-toggle="tooltip" data-bs-title="{{ name }}: {{ description }}">
+                    <span id="id-save-score-{{ name | lower }}" class="save-score-tag" hidden>🛡️</span>{{ name | slice:":3" | upper }}</span>
+                <div id="score-{{ name | lower }}" class="item-score" >+1</div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row" style="display: flex;">
+            <div class="container-skills">
+                <div class="skill-title">Choose 4 skills</div>
+                    {% for name, description in skills.items %}
+                    <p class="item-skill">
+                        <input type="checkbox" id="id_{{ name }}" class="form-check-input" name="{{ name }}">
+                        <label for="{{ name }}">
+                            <span class="skill-tooltip" data-bs-toggle="tooltip" data-bs-title="{{ description }}">
+                                {{ name }}
+                            </span>
+                        </label>
+                    </p>
+                    {% endfor %}
+            </div>
+            <div id="choices">
+                Choose your equipment:
+                    <div id="class_equipment">
+                        Equipment not displayed
+                    </div>
+                Your starting gold:
+                    <span id="gold_amount">
+                        1
+                    </span>
+                    gp
+                    <input type=hidden name="coin_gold" id="coin_gold" value=""/>
+            </div>
+        </div>
+        </div>
+            <div class="d-flex justify-content-center">
+                <input type="submit" class="btn btn-primary btn-sm" value="Create" style="margin: 10px;">
+            </div>
+    </form>
+</div>
+<!-- Extract the data from python -->
+<div id="initial-data" style="display: none">{{ initial_data_json }}</div>
+<div id="class-save-data" style="display: none">{{ class_save_json }}</div>
+<div id="class-recommendation-data" style="display: none">{{ class_recommendation_json }}</div>
+<div id="class-equipment-data" style="display: none">{{ class_equipment_json }}</div>
+<div id="class-hitdice-data" style="display: none">{{ class_hitdice_json }}</div>
+
+<!-- Load the scripts for the data-managing -->
+<script src="{% static 'create.js' %}"></script>
+
+<!-- Load the script for the tooltips -->
+<script>
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+{% endblock %}

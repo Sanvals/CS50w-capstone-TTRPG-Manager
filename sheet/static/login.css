@@ -1,0 +1,31 @@
+.menu {
+    display: center;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 15px;
+    padding: 15px;
+    width: 350px;
+    display: grid;
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.grid-login {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    justify-items: center;
+    gap: 10px 10px;
+}
+
+.grid-register {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr;
+    justify-items: center;
+    gap: 10px 10px;
+}
+
+.form-control {
+    width: 280px;
+}

@@ -1,0 +1,80 @@
+.container {
+    width: 100vw;
+    margin-top: 10px;
+}
+
+.character {
+    display: flex;
+    border: 1px solid gray;
+    margin: 5px;
+    padding: 5px;
+}
+
+.character img {
+    max-height: 20px;
+    margin-right: 10px;
+}
+
+/* Columns management */
+.column-left {
+    float: left;
+    width: 50%;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-size: .8rem;
+}
+
+.table a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+.table td {
+    padding: 0px;
+}
+.character-card {
+    color: gray;
+    font-size: .8rem;
+}
+
+.character-card a{
+    background-color: rgb(231, 230, 230);
+    border-radius: 4px;
+}
+
+.character-card p {
+    margin-bottom: 0px;
+}
+
+.column-right {
+    align-self: right;
+    height: fit-content;
+    border: 1px solid rgb(243, 243, 243);
+    padding: 20px;
+    margin-right: 0px;
+    margin-left: auto;
+    font-size: .8em;
+}
+
+@media (min-width: 701px) {
+    .column-right {
+        display: block;
+        float: right;
+    }
+
+    .column-left {
+        float:left
+    }
+}
+
+@media (max-width: 700px) {
+    .column-right {
+        display: none;
+    }
+
+    .column-left {
+        width: 100%;
+    }
+}

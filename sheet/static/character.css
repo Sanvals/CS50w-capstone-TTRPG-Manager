@@ -1,0 +1,293 @@
+.card-body {
+    margin: auto;
+    padding: 0px;
+    margin-top: 20px;
+    width: 600px;
+    background-color: #dfdfdf18;
+    box-sizing: border-box;
+}
+
+.around-info {
+    border: solid 1px rgb(219, 218, 218);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Character text data */
+
+.around-info .title {
+    position: absolute;
+    top: -10px;
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    margin: 5px auto;
+    flex-wrap: wrap;
+}
+
+.basic-info {
+    float: left;
+    border-bottom: 1px solid rgba(219, 218, 218, 0.377);
+    width: fit-content;
+    margin: 0px 5px;
+    padding: 0px 5px 0px 0px;
+}
+
+.editable-data {
+    font-size: .9rem;
+    color: rgba(48, 48, 48, 0.705);
+}
+
+.basic-info span:first-child {
+    font-size: .7rem;
+    color: rgb(121, 121, 121);
+    margin-right: 3px;
+    padding-top: 5px;
+}
+
+.right-alignment {
+    margin-left: auto;
+}
+.card-name {
+    width: 40%;
+    font-weight: 600;
+}
+
+.card-class {
+    width: 30%;
+}
+
+.card-race {
+    width: 20%;
+}
+.card-background, .card-alignment, .card-traits, .card-ideals, .card-bonds, .card-flaws {
+    min-width: 31%;
+}
+
+/* Character stats data */
+
+/* - Stats - */
+.card-stats {
+    width: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding: 5px;
+}
+
+.stat {
+    min-width: 33.33%;
+    text-align: center;
+    position: relative;
+    top: -5px;
+    margin-bottom: 32px;
+}
+
+.stat-name {
+    margin: 0px auto;
+    font-size: .7rem;
+}
+
+.stat-bonus {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.308);
+    border-radius: 20%;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(70, 70, 70);
+    position: absolute;
+    top: 8px;
+    right: 4.5px;
+    text-align: center;
+}
+
+.stat-score {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gray;
+}
+
+.proficiency-bonus, .passive-perception, .inspiration {
+    width: 100%;
+    display: flex;
+}
+
+.inspiration div {
+    margin-left: auto;
+}
+/* - Image - */
+.card-image {
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(219, 218, 218);
+    margin: auto;
+    display: flex;
+}
+
+.card-image img {
+    height: 200px;
+    width: auto;
+    margin: auto;
+    padding: 3px;
+}
+
+/* - Stats 2 - */
+.card-data {
+    width: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    padding: 5px;
+}
+
+.card-HP {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.308);
+    border-radius: 10px;
+    height: 40px;
+    min-width: 170px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(70, 70, 70);
+    padding: 5px 0px;
+    margin: 0px 0px 5px 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.score-HP {
+    position: relative;
+    width: fit-content;
+}
+
+.title-HP {
+    position: absolute;
+    color: gray;
+    font-size: .7rem;
+    top: 5%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+}
+
+#maxHP {
+    color: rgb(255, 38, 0);
+}
+
+.filter {
+    filter: grayscale(1);
+}
+
+#temporaryHP {
+    color: blue;
+}
+
+.card-AC {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.308);
+    border-radius: 10px;
+    height: 40px;
+    min-width: 48%;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(70, 70, 70);
+    margin: 0px 0px 5px 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+
+.card-speed {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.308);
+    border-radius: 10px;
+    height: 40px;
+    min-width: 49%;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(70, 70, 70);
+    margin: 0px 0px 5px 5px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.controls-part {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.controls-part button{
+    margin: 0px 10px;
+    font-size: .7rem;
+}
+
+#button-items {
+    display: none;
+}
+
+#button-add-spells {
+    display: none;
+}
+
+.table {
+    font-size: .8rem;
+}
+
+.table td {
+    padding: 0;
+}
+
+#window-add-item, #window-add-spell {
+    font-size: .7rem;
+    display: none;
+    border-style: solid;
+    border-color: rgb(214, 214, 214);
+    border-radius: 10px;
+    border-width: 1px;
+    width: 100%;
+}
+
+#item-search, #spell-search {
+    width: 50%;
+    margin: 5px;
+}
+
+.btn-search, .btn-delete, .btn-delete-spell, .btn-delete-temporary {
+    font-size: .5rem;
+}
+
+#temporary-chart {
+    font-size: .8rem;
+    position: relative;
+    border: 1px solid rgb(224, 224, 224);
+    width: 50%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn-delete-temporary {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

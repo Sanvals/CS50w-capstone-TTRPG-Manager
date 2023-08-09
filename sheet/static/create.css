@@ -1,0 +1,312 @@
+@media (min-width: 801px) {
+    .card {
+        margin-top: 100px;
+        width: 600px;
+    }
+
+    hr {
+        margin: 0px 0px 10px 0px;
+    }
+
+    .row {
+        padding: 0px 12px 12px 12px;
+    }
+
+    #card_name {
+        max-width: 250px;
+        padding: 0px 12px 0px 0px;
+    }
+
+    #card_race {
+        width: 130px;
+        padding: 0px 12px 0px 0px;
+    }
+
+    #id_race_choice {
+        height: 38px;
+    }
+
+    #card_class {
+        width: 120px;
+        padding: 0px 12px 0px 0px;
+    }
+
+    #id_class_choice {
+        height: 38px;
+    }
+
+    #card_level {
+        width: 70px;
+        padding: 0px;
+    }
+
+    #card_alignment {
+        width: 145px;
+        padding: 0px 12px 0px 0px;
+    }
+
+    #card_background {
+        width: 145px;
+        padding: 0px 12px 0px 0px;
+    }
+    
+    #card_hitdice {
+        border: solid 1px rgb(204, 204, 204);
+        border-radius: 15px;
+        padding-top: 5px;
+        margin-right: 5px;
+        width: 150px;
+        font-weight: 500;
+        font-size: 19px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: hsl(210, 5%, 32%);
+    }
+
+    #card_hitpoints {
+        border: solid 1px rgb(204, 204, 204);
+        border-radius: 15px;
+        padding: 5px 12px 0px 12px;
+        margin: 0px;
+        width: 122px;
+        font-weight: 500;
+        font-size: 19px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: hsl(210, 5%, 32%);
+        display:flex;
+    }
+    
+    #id_hp {
+        padding: 0px 0px 0px 5px;
+        margin: 0px 5px 0px 5px;
+    }
+    
+    #card_url {
+        min-width: fit-content;
+        padding: 0px;
+        margin-top: 10px;
+    }
+
+    .stat-item {
+        width: 95px;
+        text-align: center;
+        height: 90px;
+        position: relative;
+        top: 40px;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 8px 0px 8px;
+    }
+
+    #stat-item-name {
+        font-size: .9rem;
+    }
+
+    #choices {
+        float: right;
+        max-width: 400px;
+        font-size: .8rem;
+        margin-top: 5px;
+    }
+
+    .choices_container {
+        display: flex;
+    }
+
+    .choices_title {
+        float: right;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .card {
+        margin-top: 50px;
+        width: 400px;
+    }
+    
+    hr {
+        margin: 0px;
+    }
+    .row {
+        display: flex;
+        padding: 12px 12px 0px 12px;
+    }
+    
+    #card_name {
+        min-width: fit-content;
+        padding: 0px;
+        margin-bottom: 10px;
+    }
+
+    #card_race {
+        width: 143px;
+        padding: 0px;
+    }
+
+    #id_race_choice {
+        height: 38px;
+        margin-left: 0px;
+    }
+
+    #card_class {
+        width: 143px;
+        padding-right: 0px;
+    }
+
+    #id_class_choice {
+        height: 38px;
+        margin-left: 0px;
+    }
+
+    #card_level {
+        width: 87px;
+        padding-right: 0px;
+    }
+
+    #card_alignment {
+        width: 187px;
+        padding: 0px 12px 0px 0px;
+        margin-bottom: 10px;
+    }
+
+    #card_background {
+        width: 187px;
+        padding: 0px;
+    }
+    
+    #card_hitdice {
+        border: solid 1px rgb(204, 204, 204);
+        border-radius: 15px;
+        padding: 5px 10px 5px 10px;
+        margin: 0px 10px 5px 0px;
+        width: 150px;
+        font-weight: 500;
+        font-size: 19px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: hsl(210, 5%, 32%);
+    }
+
+    #card_hitpoints {
+        border: solid 1px rgb(204, 204, 204);
+        border-radius: 15px;
+        padding: 4px 10px 0px 10px;
+        margin: 0px 10px 5px 0px;
+        width: 95px;
+        font-weight: 500;
+        font-size: 19px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: hsl(210, 5%, 32%);
+        display:flex;
+    }
+
+    #id_hp {
+        width: 45px;
+        padding: 0px 0px 0px 5px;
+        margin: 0px 5px 0px 5px;
+    }
+
+    #card_url {
+        width: 105px;
+        height: 20px;
+        padding: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .id_url {
+        padding-right: 0px;
+    }
+
+    .stat-item {
+        width: 60px;
+        text-align: center;
+        height: 90px;
+        position: relative;
+        top: 40px;
+        margin: 1px;
+        padding: 0px;
+    }
+
+    #stat-item-name {
+        font-size: .7rem;
+        content: attr(data-abbreviation);
+    }
+
+    #choices {
+        float: right;
+        max-width: 240px;
+        font-size: .8rem;
+        margin-top: 5px;
+    }
+
+    .choices_container {
+        display: flex;
+    }
+
+    .choices_title {
+        float: right;
+    }
+}
+
+.stat-form {
+    border-radius: 20px;
+    height: 60px;
+    padding-top: 30px;
+}
+
+#stat-item-name {
+    position: relative;
+    bottom: 100px;
+}
+
+.item-score {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: hsl(210, 5%, 32%);
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-width: 1px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 100px;
+    background-color: white;
+    
+}
+
+.container-skills {
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-width: 0px;
+    border-radius: 15px;
+    width: 130px;
+    margin: 0px;
+    padding: 10px;
+}
+
+.container-items {
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-width: 1px;
+    border-radius: 15px;
+    width:max-content;
+    margin: 15px;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.item-skill {
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.skill-title {
+    font-size: 12px;
+    position: relative;
+    top: -5px;
+    left: 15px;
+}
+
+.form-select-sm {
+    height: 25px;
+    margin-left: 10px;
+    padding-bottom: 5px;
+}
